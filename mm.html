@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Typing Different Text</title>
+</head>
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #202223;
+    font-family: Arial, sans-serif;
+  }
+  
+  .auto-typing {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    height: 1.5em; /* Adjust based on font size */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .auto-typing span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    animation: slide 8s linear infinite;
+    opacity: 0;
+  }
+  
+  .auto-typing span:nth-child(1) { animation-delay: 0s; }
+  .auto-typing span:nth-child(2) { animation-delay: 2s; }
+  .auto-typing span:nth-child(3) { animation-delay: 4s; }
+  .auto-typing span:nth-child(4) { animation-delay: 6s; }
+  
+  @keyframes slide {
+    0%, 25% {
+      opacity: 1;
+    }
+    26%, 100% {
+      opacity: 0;
+    }
+  }
+  </style>
+<body>
+  <div class="auto-typing">
+    <span>Welcome to the website!</span>
+    <span>Learn coding easily!</span>
+    <span>Build amazing projects!</span>
+    <span>Join our community!</span>
+  </div>
+</body>
+</html>

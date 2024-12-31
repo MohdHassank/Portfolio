@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hassan Khan's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <nav>
         <a href="#about">About Me</a>
         <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a onclick="window.location.href='#skill-section';" href="#skills">Skills</a>
         <a href="#contact">Contact</a>
     </nav>
     <hr>
@@ -22,8 +22,10 @@
     <div id="main">
         <div class="details">
             <p>Hi There!</p>
-            <h1>I'M MOHD HASSAN KHAN</h1>
-            <p>Creating Seamless Experiences Through Technology.</p>
+            <div class="name">I'M <span>H</span>assan <span>K</span>han</div>
+            <!-- <div class="text-2">Creating Seamless Experiences Through <span>Technology</span></div> -->
+            <div class="text-2">Creating Seamless Experiences Through <br><span class="typing"></span></div>
+            <script src="script.js"></script>
             <button onclick="window.location.href='#about';" class="btn">
                 Explore more..
             </button>
@@ -35,7 +37,7 @@
 
     <div class="about-container" id="about">
 
-        <img src="images/my image portfolio.jpg" alt="Hassan Khan" class="myimage">
+        <img src="images/my_photo-removebg-preview.png" alt="Hassan Khan" class="myimage">
 
         <div class="about">
             <h2>Who am i?</h2>
@@ -100,31 +102,133 @@
                 </div>
 
             </div>
+            <div class="download-btn"><a href="https://github.com/GoogolDKhansorry" target="_blank"><i class="fab fa-github"></i> Download CV</a></div>
         </div>
 
     </div>
+    <div class="skills-container" id="skill-section">
+        <div class="skill-detail">
+            <h1>SKILLS</h1><br>
+            I have a strong foundation in web development with expertise in HTML and CSS for creating responsive and visually appealing designs. I am proficient in Python for scripting and backend tasks, along with
+            Java and C for software development. My understanding of Data Structures and Algorithms (DSA)
+            enables me to write efficient and optimized code, making me a versatile problem solver.
+        </div>
+        <div id="skills" class="skills-list">
+            <div class="skill-item">
+                <span class="skill-name">Html</span>
+                <span class="skill-percentage">75%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress html-progress"></div>
+            </div>
 
-    <!-- <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Smart Communication Networks App</h3>
-                <p>Offline messaging app using LoRa, Bluetooth, and Wi-Fi Direct for disaster management.</p>
-                <a href="#">View Project</a>
+
+
+            <div class="skill-item">
+                <span class="skill-name">CSS</span>
+                <span class="skill-percentage">60%</span>
             </div>
-            <div class="project">
-                <h3>Healthcare Appointment System</h3>
-                <p>Web platform for scheduling health checkups with MongoDB backend and secure payments.</p>
-                <a href="#">View Project</a>
+            <div class="skill-bar">
+                <div class="skill-progress css-progress"></div>
             </div>
-            <div class="project">
-                <h3>Water Plant Website</h3>
-                <p>Online ordering system for water delivery with integrated backend management.</p>
-                <a href="#">View Project</a>
+
+
+
+            <div class="skill-item">
+                <span class="skill-name">Python</span>
+                <span class="skill-percentage">55%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress python-progress"></div>
+            </div>
+
+
+
+            <div class="skill-item">
+                <span class="skill-name">C-Language</span>
+                <span class="skill-percentage">85%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress c-Language-progress"></div>
+            </div>
+
+
+
+            <div class="skill-item">
+                <span class="skill-name">Java</span>
+                <span class="skill-percentage">75%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress java-progress"></div>
+            </div>
+
+
+
+            <div class="skill-item">
+                <span class="skill-name">DSA</span>
+                <span class="skill-percentage">30%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress DSA-progress"></div>
             </div>
         </div>
-    </section> -->
-
+    </div>
 </body>
 
+
 </html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Typing Text</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+  } */
+  
+  .auto-typing {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #333;
+    width: 24ch; /* Adjust based on text length */
+    animation: typing 4s steps(24) infinite, blink 0.6s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 24ch; /* Matches the width defined above */
+    }
+  }
+  
+  @keyframes blink {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #333;
+    }
+  }
+  </style>
+<body>
+  <div class="auto-typing">
+    <span class="text">Welcome to Auto Typing Effect!</span>
+  </div>
+</body>
+</html> -->
