@@ -236,43 +236,43 @@ hr {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #f4a261, #e76f51);
-    color: #ffffff;
+    background: #b64d14;
+    color: #fff;
+    padding: 12px 30px; 
     font-size: 18px;
-    padding: 12px 30px;
-    border-radius: 25px;
+    margin-top: 20px;
+    border-radius: 25px; 
+    border: 2px solid #b64d14;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .download-btn a:hover {
-    background: #ffffff;
-    color: #f4a261;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    color: #b64d14;
+    background: none;
 }
 
 /* SKILLS SECTION */
 
 :root {
-    --primary-color: #f4a261; /* Updated to a premium color */
+    --primary-color: #f4a261;
     --text-dark: #ffffff;
     --text-light: #ffffff;
-    --bg-light: #444444; /* Subtle background for skill bars */
+    --bg-light: #444444; 
 }
 
 .skills-container {
     display: flex;
-    flex-wrap: wrap; /* Makes it responsive */
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 130px 40px; /* Balanced padding for all sides */
-    gap: 40px; /* Adds space between sections */
-    background: url("https://i.ibb.co/SPZD6fx/banner.jpg") no-repeat center center; /* Adds background image */
-    background-size: cover; /* Ensures the image covers the container */
-    border-radius: 16px; /* Smooth corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
-    color: #ffffff; /* Ensures text readability */
+    padding: 130px 40px; 
+    gap: 40px; 
+    background: url("https://i.ibb.co/SPZD6fx/banner.jpg") no-repeat center center;
+    background-size: cover;
+    border-radius: 16px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
 }
 
 
@@ -334,11 +334,11 @@ hr {
 
 /* Adjust widths for progress bars */
 .html-progress {
-    width: 95%;
+    width: 85%;
 }
 
 .css-progress {
-    width: 85%;
+    width: 75%;
 }
 
 .python-progress {
@@ -350,11 +350,11 @@ hr {
 }
 
 .java-progress {
-    width: 75%;
+    width: 5%;
 }
 
 .DSA-progress {
-    width: 30%;
+    width: 65%;
 }
 
 /* Responsive Design */
@@ -453,22 +453,22 @@ hr {
 }
 
 .contact-form {
-    background: rgba(0, 0, 0, 0.7); /* Adds a semi-transparent form background */
-    border-radius: 12px; /* Smooth corners */
-    padding: 20px 30px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow for premium look */
+    background: rgba(0, 0, 0, 0.7); 
+    border-radius: 12px;
+    padding: 20px 55px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
 .contact-form h2 {
     margin-bottom: 20px;
     font-size: 28px;
     font-weight: bold;
-    color: #f4a261; /* Highlighted color */
+    color: #f4a261;
 }
 
 .contact-form p {
     color: #ffffff;
-    margin-bottom: 20px; /* Adds spacing below text */
+    margin-bottom: 20px; 
 }
 
 .form-group {
@@ -478,15 +478,15 @@ hr {
 .form-control {
     width: 100%;
     padding: 10px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.4); /* Subtle border */
-    border-radius: 8px; /* Smooth corners */
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+    border-radius: 8px; 
+    background-color: rgba(255, 255, 255, 0.2);
     color: #ffffff;
     transition: border 0.3s ease;
 }
 
 .form-control:focus {
-    border-color: #f4a261; /* Highlighted border on focus */
+    border-color: #f4a261; 
     outline: none;
 }
 
@@ -495,40 +495,41 @@ textarea.form-control {
 }
 
 .btn {
-    display: block;
-    width: 100%; /* Full width button */
-    background: linear-gradient(45deg, #f4a261, #e76f51); /* Gradient background */
-    color: #ffffff;
-    padding: 12px 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #b64d14;
+    color: #fff;
+    padding: 12px 223px; 
     font-size: 18px;
-    font-weight: bold;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    border-radius: 25px; 
+    border: 2px solid #b64d14;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: #ffffff;
-    color: #f4a261;
-    transform: scale(1.05); /* Slight scaling effect on hover */
+    color: #b64d14;
+    background: none;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .contact-grid {
-        grid-template-columns: 1fr; /* Stacks columns */
+        grid-template-columns: 1fr; 
         gap: 20px;
     }
 
     .btn {
-        width: auto; /* Adjust button width */
+        width: auto; 
     }
 }
 
 
-/* 
-PROJECTS SECTION */
+
+/*PROJECTS SECTION */
 
 
 .five-page {
@@ -540,7 +541,7 @@ PROJECTS SECTION */
 .section-title {
     font-size: 50px;
     font-family: 'Segoe UI', Roboto, sans-serif;
-    color: #b64d14; /* Premium highlight color */
+    color: #b64d14; 
     text-align: center;
     font-weight: bold;
     margin-bottom: 5px;
@@ -610,30 +611,6 @@ PROJECTS SECTION */
     color: #b64d14;
     background: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -741,4 +718,4 @@ ul {
   }
   
   
-  
+   
