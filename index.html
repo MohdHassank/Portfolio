@@ -9,12 +9,40 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const sliders = document.querySelectorAll(".slider");
+
+        sliders.forEach((slider) => {
+            let currentSlide = 0;
+            const track = slider.querySelector(".slider-track");
+            const slides = slider.querySelectorAll(".slide");
+            const totalSlides = slides.length;
+
+            const prevBtn = slider.querySelector(".prev");
+            const nextBtn = slider.querySelector(".next");
+
+            function moveSlide(direction) {
+                currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+
+            prevBtn.addEventListener("click", () => moveSlide(-1));
+            nextBtn.addEventListener("click", () => moveSlide(1));
+        });
+    });
+</script>
+
+
+
+
 <body>
     <div class="one-page">
         <nav>
             <a href="#about">About Me</a>
             <a onclick="window.location.href='#skill-section';" href="#page-5">Projects</a>
             <a onclick="window.location.href='#skill-section';" href="#page-3">Skills</a>
+            <a onclick="window.location.href='#skill-section';" href="#page-6">Achievements</a>
             <a onclick="window.location.href='#skill-section';" href="#page-4">Contact</a>
             <!-- <a href="#contact">Contact</a> -->
         </nav>
@@ -93,7 +121,7 @@
             <div class="about">
                 <h2>Who am i?</h2>
                 <h1>Technology and development enthusiast | Building skills in programming developments</h1>
-                <p>Hi 👋🏻, I'm a BTech 2nd year student in Information Technology 🎓 at Shri Ram Murti Smarak College
+                <p>Hi 👋🏻, I'm a BTech 3rd year student in Information Technology 🎓 at Shri Ram Murti Smarak College
                     of
                     Engineering and Technology, passionate about development, programming and data analytics 💻.
                     I'm developing skills in problem-solving, programming, communication through academic projects and
@@ -160,16 +188,31 @@
         </div>
     </div>
 
-    <div class="three-page" id="page-3">
+   <div class="three-page" id="page-3">
+  <div class="skills-container" id="skill-section">
+    <div class="skill-detail">
+      <h1>SKILLS</h1><br>
+      I have a strong foundation in web development with expertise in HTML and CSS for creating responsive and
+      visually appealing designs. I am proficient in Python for scripting and backend tasks, along with
+      Java and C for software development. My understanding of Data Structures and Algorithms (DSA)
+      enables me to write efficient and optimized code, making me a versatile problem solver.
 
-        <div class="skills-container" id="skill-section">
-            <div class="skill-detail">
-                <h1>SKILLS</h1><br>
-                I have a strong foundation in web development with expertise in HTML and CSS for creating responsive and
-                visually appealing designs. I am proficient in Python for scripting and backend tasks, along with
-                Java and C for software development. My understanding of Data Structures and Algorithms (DSA)
-                enables me to write efficient and optimized code, making me a versatile problem solver.
-            </div>
+      <!-- 🔴 Added Skill Tags -->
+      <div class="pill-skill-tags">
+        <span class="pill-tag">Problem Solver</span>
+        <span class="pill-tag">Foundation in DSA</span>
+        <span class="pill-tag">IOT development</span>
+        <span class="pill-tag">Presentations expert</span>
+        <span class="pill-tag">Well communication</span>
+        <span class="pill-tag">Skilled in Programming </span>
+        <span class="pill-tag">Technology & Development Enthusiast</span>
+        <span class="pill-tag">3 x Hackathons Winner🏆</span>
+        <span class="pill-tag">Team Management</span>
+        <span class="pill-tag">Leadership</span>
+      </div>
+    </div>
+
+
             <div id="skills" class="skills-list">
                 <div class="skill-item">
                     <span class="skill-name">Html</span>
@@ -213,7 +256,7 @@
 
                 <div class="skill-item">
                     <span class="skill-name">Java</span>
-                    <span class="skill-percentage">10%</span>
+                    <span class="skill-percentage">40%</span>
                 </div>
                 <div class="skill-bar">
                     <div class="skill-progress java-progress"></div>
@@ -235,6 +278,7 @@
     <div class="five-page" id="page-5">
         <h1 class="section-title">MY PROJECTS</h1>
         <div class="cards">
+
             <div class="card">
                 <img src="images/patient_helpdesk.png" alt="Card Image" class="card-image">
                 <div class="card-content">
@@ -246,17 +290,18 @@
             </div>
 
             <div class="card">
-                <img src="images/ResQlink.jpg" alt="Card Image" class="card-image">
+                <img src="images/LoRaMesh.jpg" alt="Card Image" class="card-image">
                 <div class="card-content">
-                    <h2 class="card-title">ResQlink device</h2>
-                    <p class="card-description">This is a device that allows network independent or any cellular
-                        networks communication using LoRa technology.</p>
+                    <h2 class="card-title">LoRa Mesh Device</h2>
+                    <p class="card-description">It is an offline communication device which allows to communicate over a
+                        distance in an emergencies or in rular areas where no internet or cellular networks are down.
+                    </p>
                     <button class="card-button">Learn More</button>
                 </div>
             </div>
 
             <div class="card">
-                <img src="images/neuraX.png" alt="Card Image" class="card-image">
+                <img src="images/NeuraX.png" alt="Card Image" class="card-image">
                 <div class="card-content">
                     <h2 class="card-title">Neura X AI-Powered Personal Assistant</h2>
                     <p class="card-description"> Built Neura X, a personal AI
@@ -266,9 +311,118 @@
                 </div>
             </div>
 
+            <div class="cardlast">
+                <img src="images/college helphub.png" alt="Card Image" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">College HelpHub System</h2>
+                    <p class="card-description"> College HelpHub is a student-driven platform for reporting bugs and
+                        solving project-related doubts collaboratively. It helps students connect, share errors, and
+                        receive peer-to-peer solutions efficiently.</p>
+                    <button class="card-button">Learn More</button>
+                </div>
+            </div>
+
 
         </div>
     </div>
+
+    <section class="achievements-container" id="page-6">
+        <h2 class="achievements-title">Achievements</h2>
+
+        <div class="achievement-row">
+            <div class="slider">
+                <div class="slider-track">
+                    <img src="images/H1-1.jpg" class="slide" />
+                    <img src="images/H1-2.jpg" class="slide" />
+                    <img src="images/H1-3.jpg" class="slide" />
+                </div>
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+            <div class="achievement-info">
+                <h3>SRMS Hackathon Winner</h3>
+                <p>Secured 🏅1st Consolation Prize in the SRMS Hackathon by building an innovative tech solution during
+                    an intense 34-hour challenge. Demonstrated strong coding, teamwork, and problem-solving skills among
+                    45+ participating teams. Awarded a cash prize of ₹5000 for creativity, impact, and technical
+                    excellence</p>
+            </div>
+        </div>
+
+        <div class="achievement-row">
+            <div class="slider">
+                <div class="slider-track">
+                    <img src="images/H2-1.jpg" class="slide" />
+                    <img src="images/H2-2.jpg" class="slide" />
+                    <img src="images/H2-3.jpg" class="slide" />
+                </div>
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+            <div class="achievement-info">
+                <h3>Bharat Shiksha Expo Event</h3>
+                <p>Proud to secure 🥈2nd Place at Bharat Shiksha Expo Mart Limited 2025, Greater Noida, after being
+                    shortlisted from AKTU Innovation Hub. Presented our offline communication system tackling real-world
+                    challenges with innovation and teamwork. Grateful for the mentorship and opportunity to connect with
+                    industry experts and investors.</p>
+            </div>
+        </div>
+
+        <div class="achievement-row">
+            <div class="slider">
+                <div class="slider-track">
+                    <img src="images/H3-1.jpg" class="slide" />
+                    <img src="images/H3-2.jpg" class="slide" />
+                    <img src="images/H3-3.jpg" class="slide" />
+                </div>
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+            <div class="achievement-info">
+                <h3>Winning in Tech Gallery</h3>
+                <p>Secured 🥇1st Prize in the Tech Gallery at TechVoym – a national-level event hosted by SRMS.
+                    Showcased our innovative offline communication system and impressed judges with its real-world
+                    impact. Honored with a cash prize of ₹1500 for our standout project.</p>
+            </div>
+        </div>
+
+        <div class="achievement-row">
+            <div class="slider">
+                <div class="slider-track">
+                    <img src="images/p.png" class="slide" />
+                    <!-- <img src="images/H3-2.jpg" class="slide" />
+                <img src="images/H3-3.jpg" class="slide" /> -->
+                </div>
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+            <div class="achievement-info">
+                <h3>From Idea to Intellectual Property!</h3>
+                <p>Our team has successfully applied for a patent for our offline communication device — a project
+                    designed to solve real-world connectivity challenges. This innovation has already earned recognition
+                    at multiple hackathons across India. Taking this step marks our commitment to turning ideas into
+                    impactful solutions.</p>
+            </div>
+        </div>
+
+        <div class="achievement-row">
+            <div class="slider">
+                <div class="slider-track">
+                    <img src="images/H4-1.jpg" class="slide" />
+                    <img src="images/H4-2.jpg" class="slide" />
+                    <img src="images/H4-3.jpg" class="slide" />
+                </div>
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+            <div class="achievement-info">
+                <h3>Galgotias International Hackathon(GIH)</h3>
+                <p>Honored to win the 'Best Innovation Team' award 🏆 at Galgotias International Hackathon 2025,
+                    competing among 300+ top-tier teams across India. Our offline communication system stood out through
+                    rigorous rounds, earning us a ₹10,000 prize. Grateful for an incredible journey of innovation,
+                    teamwork, and mentorship</p>
+            </div>
+        </div>
+    </section>
 
     <div class="four-page" id="page-4">
         <main class="contact-page">
