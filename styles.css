@@ -1,4 +1,16 @@
-/* Welcome page  */
+/* Fade section code  */
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* /Main css start  */
 html {
     scroll-behavior: smooth;
 }
@@ -7,17 +19,15 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-
-  background-image: url('images/banner.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  margin: 0;
-  padding: 0;
-
-
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    margin: 0;
+    padding: 0;
 }
+
 
 nav {
     display: flex;
@@ -51,10 +61,10 @@ hr {
     justify-content: space-between;
     padding: 109px 40px;
     margin: 0 auto;
-        margin-bottom: 82px;
+    margin-bottom: 82px;
     /* Center the content */
     gap: 20px;
-    
+
 }
 
 .details {
@@ -291,10 +301,99 @@ hr {
     background: none;
 }
 
+
+
+/* Education section  */
+
+.education-section {
+    padding: 50px 20px;
+    margin-bottom: 48px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 100px;
+    margin-left: 616px;
+    border-left: 4px solid #ff6600;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-date {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 20px;
+    margin-top: 32px;
+    left: -172px;
+    width: 76px;
+    text-align: right;
+    font-weight: bold;
+    color: #e3e7eb;
+}
+
+
+.timeline-dot {
+    position: absolute;
+    left: -41px;
+    top: 20px;
+    width: 75px;
+    height: 74px;
+    background-color: #fff;
+    border: 2px solid #003366;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-dot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.timeline-content {
+    padding-left: 85px;
+}
+
+.edu-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.edu-school {
+    font-weight: bold;
+    color: #FF6600;
+    /* Orange color */
+}
+
+.edu-marks {
+    color: #333;
+}
+
+.edu-marks span {
+    color: #FF6600;
+    font-weight: bold;
+}
+
+
+
 /* SKILLS SECTION */
 
 :root {
-    --primary-color: #f4a261;
+    --primary-color: #d66419;
     --text-dark: #ffffff;
     --text-light: #ffffff;
     --bg-light: #444444;
@@ -307,10 +406,7 @@ hr {
     justify-content: space-between;
     padding: 130px 40px;
     gap: 40px;
-    /* background: url("https://i.ibb.co/SPZD6fx/banner.jpg") no-repeat center center; */
     background-size: cover;
-    /* border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
     color: #ffffff;
 }
 
@@ -422,7 +518,7 @@ hr {
     width: 85%;
 }
 
-.css-progress {
+.cplusplus-progress {
     width: 75%;
 }
 
@@ -434,8 +530,8 @@ hr {
     width: 85%;
 }
 
-.java-progress {
-    width: 40%;
+.datascience-progress {
+    width: 20%;
 }
 
 .DSA-progress {
@@ -459,24 +555,367 @@ hr {
     }
 }
 
+
+/*PROJECTS SECTION */
+
+
+.five-page {
+    background-size: cover;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 50px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #b64d14;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* 
+
+
+ .cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    background: #333;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-title {
+    color: orange;
+    margin-top: 10px;
+  }
+  .card-description {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  .cta-trigger {
+    background: orange;
+    border: none;
+    padding: 10px 20px;
+    margin: 15px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+  }
+  .overlay-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+  .overlay-panel {
+    background: #fff;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    overflow-y: auto;
+    padding: 30px;
+    position: relative;
+  }
+  .panel-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+  } */
+
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12rem;
+    margin: 0;
+}
+
+.cta-trigger {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #b64d14;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 25px;
+    border: 2px solid #b64d14;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-trigger:hover {
+    color: #b64d14;
+    background: none;
+}
+
+.overlay-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+.overlay-panel {
+    background: #fff;
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+    max-width: 1000px;
+    overflow-y: auto;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.panel-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+.card {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease;
+    margin-top: 137px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    color: #b64d14;
+}
+
+.card-description {
+    font-size: 1em;
+    color: #ffffff;
+    margin: 0.5em 0;
+}
+
+.card-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #b64d14;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 25px;
+    border: 2px solid #b64d14;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.card-button:hover {
+    color: #b64d14;
+    background: none;
+}
+
+.cardlast {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 13px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease;
+    margin-left: 102px;
+    margin-right: auto;
+    margin-top: -83px;
+    margin-bottom: 137px;
+}
+
+.cardlast:hover {
+    transform: translateY(-10px);
+}
+
+.achievements-container {
+
+    background-size: cover;
+    padding: 20px;
+}
+
+
+.slider {
+    position: relative;
+    width: 27%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+
+
+/* Normal */
+
+
+.achievements-title {
+    font-size: 50px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #b64d14;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 55px;
+    margin-bottom: 95px;
+
+}
+
+.achievement-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    margin-top: 51px;
+    margin-left: 104px;
+    flex-wrap: wrap;
+}
+
+.achievement-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.achievement-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.achievement-info h3 {
+    font-size: 24px;
+    color: #a9643f;
+    margin-bottom: 10px;
+}
+
+.achievement-info p {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .achievement-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .achievement-image img {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+
 /* CONTACT PAGE */
 
 .contact-page {
     margin: px auto;
-    /* Centers the page */
+
     padding: 60px 40px;
-    /* Balanced padding */
+
     box-sizing: border-box;
-    /* background: url("https://i.ibb.co/SPZD6fx/banner.jpg") no-repeat center center; */
-    /* Background image */
+
     background-size: cover;
-    /* Ensures the image covers the entire area */
+
     border-radius: 16px;
-    /* Smooth corners */
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Adds subtle shadow */
+
     color: #ffffff;
-    /* Ensures text is readable */
+
 }
 
 .contact-section {
@@ -487,7 +926,7 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    /* Adds space between columns */
+
     align-items: start;
 }
 
@@ -495,16 +934,15 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* Adds space between contact items */
+
 }
 
 .contact-info h1 {
     font-size: 50px;
     font-family: 'Segoe UI', Roboto, sans-serif;
     color: #f4a261;
-    /* Premium highlight color */
     margin-bottom: 20px;
-    /* Adds spacing below */
+
 }
 
 .contact-info-item {
@@ -630,223 +1068,6 @@ textarea.form-control {
         width: auto;
     }
 }
-
-
-
-/*PROJECTS SECTION */
-
-
-.five-page {
-    /* background: url("https://i.ibb.co/SPZD6fx/banner.jpg") no-repeat center center; */
-    background-size: cover;
-    padding: 20px;
-}
-
-.section-title {
-    font-size: 50px;
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    color: #b64d14;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12rem;
-    margin: 0;
-}
-
-.card {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.2s ease;
-    margin-top: 137px;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card-image {
-    width: 100%;
-    height: auto;
-}
-
-.card-content {
-    padding: 16px;
-}
-
-.card-title {
-    font-size: 1.5em;
-    margin: 0.5em 0;
-    color: #b64d14;
-}
-
-.card-description {
-    font-size: 1em;
-    color: #ffffff;
-    margin: 0.5em 0;
-}
-
-.card-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background: #b64d14;
-    color: #fff;
-    padding: 12px 30px;
-    font-size: 18px;
-    margin-top: 20px;
-    border-radius: 25px;
-    border: 2px solid #b64d14;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.card-button:hover {
-    color: #b64d14;
-    background: none;
-}
-
-.cardlast {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 13px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.2s ease;
-    margin-left: 176px;
-    margin-right: auto;
-    margin-top: -83px;
-    margin-bottom: 137px;
-}
-
-.cardlast:hover {
-    transform: translateY(-10px);
-}
-
-.achievements-container {
-    /* background: url("https://i.ibb.co/SPZD6fx/banner.jpg") no-repeat center center; */
-    background-size: cover;
-    padding: 20px;
-}
-
-
-.slider {
-    position: relative;
-    width: 27%;
-    max-width: 600px;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.slider-track {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.slide {
-    min-width: 100%;
-    object-fit: cover;
-}
-
-.prev,
-.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: black;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    z-index: 1;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-
-
-
-
-/* Normal */
-
-
-.achievements-title {
-    font-size: 50px;
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    color: #b64d14;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 55px;
-    margin-bottom: 95px;
-    
-}
-
-.achievement-row {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 40px;
-    margin-top: 51px;
-    margin-left: 104px;
-    flex-wrap: wrap;
-}
-
-.achievement-image img {
-    width: 400px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-}
-
-.achievement-info {
-    flex: 1;
-    min-width: 280px;
-}
-
-.achievement-info h3 {
-    font-size: 24px;
-    color: #a9643f;
-    margin-bottom: 10px;
-}
-
-.achievement-info p {
-    font-size: 16px;
-    color: #cccccc;
-    line-height: 1.6;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .achievement-row {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .achievement-image img {
-        width: 90%;
-        margin: 0 auto;
-    }
-}
-
-
-
 
 
 

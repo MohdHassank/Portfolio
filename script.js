@@ -1,20 +1,4 @@
-// // Ensure Typed.js is loaded before using it
-// document.addEventListener("DOMContentLoaded", function() {
-//     var typed = new Typed(".typing", {
-//       strings: [
-//         "Problem Solving",
-//         "Web Development",
-//         "Lifelong Learnings",
-//         "Designing"
-//       ],
-//       typeSpeed: 100,
-//       backSpeed: 60,
-//       loop: true
-//     });
-//   });
-  
 
-// Ensure Typed.js is loaded before using it
 document.addEventListener("DOMContentLoaded", function () {
   var typed = new Typed(".typing", {
       strings: [
@@ -72,3 +56,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(".fade-section");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
